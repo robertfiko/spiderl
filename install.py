@@ -6,14 +6,16 @@ from pathlib import Path
 def symlink(link, target):
     if (os.path.isfile(link)):
         os.remove(link)
-        os.symlink(target, link)
+    os.symlink(target, link)
 
 path =os.path.join(Path.home(), ".config/spiderl")
 
 if (not os.path.isdir(path) and not os.path.isfile(path)):
     os.mkdir(path)
-    os.path.join(path, "otp_paths")
-    os.path.join(path, "otp_version")
+    paths = os.path.join(path, "otp_paths")
+    versions = os.path.join(path, "otp_version")
+    open(paths, "a")
+    open(versions, "a")
 else:
     print("Spiderl config folder already exsits. Using that one.")
 
