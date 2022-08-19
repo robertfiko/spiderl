@@ -15,4 +15,4 @@ vsnFile = open(vsnPath, "r")
 otpPath = vsnFile.read()
 vsnFile.close()
 
-print(getExecPath(otpPath)+sys.argv[1])
+print(os.path.join(getExecPath(otpPath), sys.argv[1]))

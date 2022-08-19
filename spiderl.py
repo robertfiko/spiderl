@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 
 from spiderllib import changeGlobalVsn, delVsnPath, globalVsnPath, getExecPath, changeLocalVsn, updateVsnPath, vsnExsits
 
@@ -14,7 +15,7 @@ else:
     args = sys.argv[3:]
 
     if command == "shell":
-        print(getExecPath(version)+"erl")
+        print(os.path.join(getExecPath(version), "erl"))
     elif command == "local":
         changeLocalVsn(version)
     elif command == "global":
