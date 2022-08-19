@@ -12,7 +12,7 @@ _Note: not a package manager, you need to manually install your Erlang/OTP versi
 This will create `spiderl` symlink to `/usr/local/bin`, and change the symlink of `erl` and `erlc` to SpidERL.
 
 ```sh
-git clone <LINK>
+git clone https://github.com/robertfiko/spiderl.git
 chmod u+x install.py
 ./install.py
 ```
